@@ -16,6 +16,6 @@ import java.util.List;
 public interface TableMetaInfoService extends IService<TableMetaInfo> {
 
     // 初始化元数据
-    void initMetaInfo(String db, String assessDate);
+    void initMetaInfo(String db, String assessDate) throws Exception;
 
 }
