@@ -17,12 +17,12 @@ public class MyGenerator
             指定为哪些表生成
 
          */
-        String[] tables={ "table_meta_info"  };
+        String[] tables={ "table_meta_info_extra"  };
 
         FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/dga","root","admin")
                 .globalConfig(builder -> {
                     builder.author("atguigu")               //作者
-                            .outputDir("/Users/yeeka/IdeaProjects/git/DGA/src/main/java")    //输出路径(写到java目录)
+                            .outputDir("/Users/yeeka/station/courses/DGA/src/main/java")    //输出路径(写到java目录)
                             .commentDate("yyyy-MM-dd")
                             .dateType(DateType.SQL_PACK);  //选择实体类中的日期类型  ，Date or LocalDatetime
                 })

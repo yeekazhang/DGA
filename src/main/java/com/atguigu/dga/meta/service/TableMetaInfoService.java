@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * <p>
  * 元数据表 服务类
+ *      每天为每张表都生成一条元数据考评信息
  * </p>
  *
  * @author atguigu

@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,6 +147,9 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
 
             // 执行封装逻辑
             TableMetaInfo tableMetaInfo = createTableMetaInfo(tableMeta);
+            // 设置考评日期
+            tableMetaInfo.setAssessDate(assessDate);
+            tableMetaInfo.setCreateTime(new Timestamp(System.currentTimeMillis()));
             result.add(tableMetaInfo);
 
         }
@@ -178,7 +182,7 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
         tableMetaInfo.setTableFsPath(sd.getLocation());
         tableMetaInfo.setTableInputFormat(sd.getInputFormat());
         tableMetaInfo.setTableOutputFormat(sd.getOutputFormat());
-        tableMetaInfo.setTableRowFormatSerde(JSON.toJSONString(sd.getSerdeInfo()));
+        tableMetaInfo.setTableRowFormatSerde(sd.getSerdeInfo().getSerializationLib());
         tableMetaInfo.setTableCreateTime(tableMeta.getCreateTime() + "");
         tableMetaInfo.setTableType(tableMeta.getTableType());
         tableMetaInfo.setTableBucketColsJson(JSON.toJSONString(sd.getBucketCols()));
