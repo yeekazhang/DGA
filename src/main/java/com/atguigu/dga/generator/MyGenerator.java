@@ -24,7 +24,7 @@ public class MyGenerator
                     builder.author("atguigu")               //作者
                             .outputDir("/Users/yeeka/IdeaProjects/git/DGA/src/main/java")    //输出路径(写到java目录)
                             .commentDate("yyyy-MM-dd")
-                            .dateType(DateType.ONLY_DATE);  //选择实体类中的日期类型  ，Date or LocalDatetime
+                            .dateType(DateType.SQL_PACK);  //选择实体类中的日期类型  ，Date or LocalDatetime
                 })
                 .packageConfig(builder -> {                 //各个package 名称
                     builder.parent("com.atguigu.dga")

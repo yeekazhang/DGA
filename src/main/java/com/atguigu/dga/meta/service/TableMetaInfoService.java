@@ -3,6 +3,8 @@ package com.atguigu.dga.meta.service;
 import com.atguigu.dga.meta.bean.TableMetaInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 元数据表 服务类
