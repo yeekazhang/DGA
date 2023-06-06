@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.zaxxer:HikariCP-java7:2.4.12" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.zaxxer" artifactId="HikariCP-java7" version="2.4.12" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/com/zaxxer/HikariCP-java7/2.4.12/HikariCP-java7-2.4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/com/zaxxer/HikariCP-java7/2.4.12/HikariCP-java7-2.4.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/com/zaxxer/HikariCP-java7/2.4.12/HikariCP-java7-2.4.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

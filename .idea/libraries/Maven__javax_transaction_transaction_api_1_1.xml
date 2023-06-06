@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: javax.transaction:transaction-api:1.1" type="java-imported" external-system-id="Maven">
+    <properties groupId="javax.transaction" artifactId="transaction-api" version="1.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

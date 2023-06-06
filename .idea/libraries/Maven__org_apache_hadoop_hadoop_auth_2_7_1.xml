@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.hadoop:hadoop-auth:2.7.1" type="java-imported" external-system-id="Maven">
+    <properties groupId="org.apache.hadoop" artifactId="hadoop-auth" version="2.7.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/org/apache/hadoop/hadoop-auth/2.7.1/hadoop-auth-2.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/org/apache/hadoop/hadoop-auth/2.7.1/hadoop-auth-2.7.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository/org/apache/hadoop/hadoop-auth/2.7.1/hadoop-auth-2.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
