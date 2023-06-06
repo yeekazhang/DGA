@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    dynamic:
+      primary: mybatis #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        gmall:
+          url: jdbc:mysql://hadoop102:3306/gmall?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: "admin"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 5 #连接池一创建，池子中自带5个初始连接
+            max-active: 20  #极限容量
+            max-wait: 60000 #当池子中连接不够用时，客户端借连接的极限等待时间，超过时间报错
+            min-idle: 5     #池子中最小存活的连接数
+            test-on-borrow: true  #借连接时是否测试，先测试，没问题再出库
+            test-on-return: false #还连接时是否要测试
+            test-while-idle: true #池子中的连接都是空闲的时候，要不要测试
+        mybatis:
+          url: jdbc:mysql://hadoop102:3306/Mybatis?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+          username: root
+          password: "admin"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 5
+            max-active: 20
+            max-wait: 60000
+            min-idle: 5
+            test-on-borrow: true
+            test-on-return: false
+            test-while-idle: true
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+
+mybatis:
+  mapper-locations: classpath*:/mappers/*Mapper.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
