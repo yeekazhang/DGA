@@ -7,12 +7,17 @@ import com.atguigu.dga.meta.mapper.TableMetaInfoMapper;
 import com.atguigu.dga.meta.service.TableMetaInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.hive.metastore.HiveMetaStoreClient;
 import org.apache.hadoop.hive.metastore.api.StorageDescriptor;
 import org.apache.hadoop.hive.metastore.api.Table;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +35,12 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
     @Autowired
     private HiveMetaStoreClient client;
 
+    @Value("${hdfs.uri}")
+    private String hdfsUri;
+
+    @Value("${hdfs.admin}")
+    private String hdfsAdmin;
+
     @Override
     public void initMetaInfo(String db, String assessDate) {
 
@@ -37,17 +48,36 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
         remove(new QueryWrapper<TableMetaInfo>().eq("assess_date", assessDate).eq("schema_name", db));
 
         // 从hive的元数据中抽取表的描述
+        List<TableMetaInfo> tableMetaInfos;
         try {
-            extractMetaInfoFromHive(db, assessDate);
+            tableMetaInfos = extractMetaInfoFromHive(db, assessDate);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-
         // 使用hdfs客户端统计表目录的元数据信息
+        extractMetaInfoFromHdfs(tableMetaInfos);
+
 
         // 把表的元数据信息写入数据库
 
+    }
+
+    private void extractMetaInfoFromHdfs(List<TableMetaInfo> tableMetaInfos) throws Exception {
+
+        /*
+            准备一个hdfs的客户端对象
+
+            查看数仓中所有表在hdfs的元数据信息，这个用户必须有权限才可以
+            直接用hdfs管理员
+         */
+        FileSystem hdfs = FileSystem.get(new URI(hdfsUri), new Configuration(), hdfsAdmin);
+
+        for (TableMetaInfo tableMetaInfo : tableMetaInfos) {
+
+
+
+        }
     }
 
     public List<TableMetaInfo> extractMetaInfoFromHive(String db, String assessDate) throws Exception{
