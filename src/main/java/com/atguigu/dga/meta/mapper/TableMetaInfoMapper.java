@@ -1,8 +1,12 @@
 package com.atguigu.dga.meta.mapper;
 
+import com.atguigu.dga.meta.bean.PageTableMetaInfo;
 import com.atguigu.dga.meta.bean.TableMetaInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,5 +18,13 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface TableMetaInfoMapper extends BaseMapper<TableMetaInfo> {
+
+    // 查询指定页面的列表
+    List<PageTableMetaInfo> queryTableMetaInfoList(@Param("from") Integer from,@Param("size") Integer size,@Param("whereSql") String whereSql);
+
+    // 查询符合条件的列表总数
+    int statsTotalNum(@Param("whereSql") String tableName);
+
+
 
 }

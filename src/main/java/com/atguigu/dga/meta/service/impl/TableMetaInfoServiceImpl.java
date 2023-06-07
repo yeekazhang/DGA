@@ -2,11 +2,13 @@ package com.atguigu.dga.meta.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SimplePropertyPreFilter;
+import com.atguigu.dga.meta.bean.PageTableMetaInfo;
 import com.atguigu.dga.meta.bean.TableMetaInfo;
 import com.atguigu.dga.meta.mapper.TableMetaInfoMapper;
 import com.atguigu.dga.meta.service.TableMetaInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
@@ -37,7 +39,7 @@ import java.util.List;
 @Service
 public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, TableMetaInfo> implements TableMetaInfoService {
 
-    @Autowired
+    //@Autowired
     private HiveMetaStoreClient client;
 
     @Value("${hdfs.uri}")
@@ -69,6 +71,61 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
 
     }
 
+
+    /*
+        查询数据库
+            根据  String tableName, String schemaName, String dwLevel
+                生成相应的过滤条件
+
+            MybatisPlus 的Service类，可以直接通过属性 baseMapper获取对应的Mapper接口
+     */
+
+    // whereSql语句生成器
+    private String generateWhereSql(String tableName, String schemaName, String dwLevel){
+        StringBuilder whereSb = new StringBuilder(" where ");
+
+        /*
+            根据前台传入的参数形成where条件去拼接sql
+            StringUtils.isNotBlank(str): str不是null,不是' ', 不是' 空格，回车，制表符 ', 返回true
+         */
+        if (StringUtils.isNotBlank(schemaName)){
+            whereSb.append(" schema_name = '" + schemaName).append("' and ");
+        }
+        if (StringUtils.isNotBlank(tableName)){
+            whereSb.append(" table_name = '" + tableName).append("' and ");
+        }
+        if (StringUtils.isNotBlank(dwLevel)){
+            whereSb.append(" dw_level = '" + dwLevel).append("' and ");
+        }
+
+        whereSb.append(" 1 = 1 ");
+
+        String whereSqlStr = whereSb.toString();
+
+        return whereSqlStr;
+    }
+
+   // 查询数据库列表
+    @Override
+    public List<PageTableMetaInfo> queryTableMetaInfoList(Integer from, Integer pageSize, String tableName, String schemaName, String dwLevel) {
+
+        String whereSqlStr = generateWhereSql(tableName, schemaName, dwLevel);
+
+        List<PageTableMetaInfo> data = baseMapper.queryTableMetaInfoList(from, pageSize, whereSqlStr);
+
+        return data;
+    }
+
+    // 查询数据库列表总数
+    @Override
+    public int statsTotalNum(String tableName, String schemaName, String dwLevel) {
+        String whereSql = generateWhereSql(tableName, schemaName, dwLevel);
+        return baseMapper.statsTotalNum(whereSql);
+    }
+
+    /*
+        从hdfs中统计元数据信息
+     */
     private void extractMetaInfoFromHdfs(List<TableMetaInfo> tableMetaInfos) throws Exception {
 
         /*

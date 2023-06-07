@@ -1,5 +1,6 @@
 package com.atguigu.dga.meta.service;
 
+import com.atguigu.dga.meta.bean.PageTableMetaInfo;
 import com.atguigu.dga.meta.bean.TableMetaInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -18,5 +19,12 @@ public interface TableMetaInfoService extends IService<TableMetaInfo> {
 
     // 初始化元数据
     void initMetaInfo(String db, String assessDate) throws Exception;
+
+    // 查询元数据列表
+    List<PageTableMetaInfo> queryTableMetaInfoList(Integer from, Integer pageSize, String tableName, String schemaName, String dwLevel);
+
+    // 查询元数据列表总数
+    int statsTotalNum(String tableName, String schemaName, String dwLevel);
+
 
 }

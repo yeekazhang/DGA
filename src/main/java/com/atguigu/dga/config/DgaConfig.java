@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 容器配置类，配置容器中要创建的对象
  */
-@Configuration
+//@Configuration
 public class DgaConfig {
 
     @Value("${hive.metastore.uris}")

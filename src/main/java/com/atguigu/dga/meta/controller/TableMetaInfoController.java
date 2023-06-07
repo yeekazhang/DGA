@@ -1,10 +1,14 @@
 package com.atguigu.dga.meta.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.atguigu.dga.meta.bean.PageTableMetaInfo;
 import com.atguigu.dga.meta.service.TableMetaInfoExtraService;
 import com.atguigu.dga.meta.service.TableMetaInfoService;
-import org.json.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * <p>
@@ -53,13 +57,26 @@ public class TableMetaInfoController {
                        pageNo = 1, 从第 1 条数据开始返回，返回之后的20条
                        pageNo = 2, 从第 21 条数据开始返回，返回之后的20条
 
-                       from = (pageNo
+                       from = (pageNo - 1) * 20 + 1
 
      */
     @GetMapping("/table-list")
-    public Object queryMetaInfoList(Integer pageNo, Integer pageSize, String tableName, String schemaName, String dwlevel){
+    public Object queryMetaInfoList(Integer pageNo, Integer pageSize, String tableName, String schemaName, String dwLevel){
 
         JSONObject result = new JSONObject();
+
+        // 计算返回数据的其实行数
+        int from = (pageNo - 1) * pageSize;
+
+        // 调用service查询列表数据
+        List<PageTableMetaInfo> metaInfos = metaInfoService.queryTableMetaInfoList(from, pageSize, tableName, schemaName, dwLevel);
+
+        // 查询符合条件的总数
+        int num = metaInfoService.statsTotalNum(tableName, schemaName, dwLevel);
+
+        // 按照要求，封装返回的数据
+        result.put("total", num);
+        result.put("list", metaInfos);
 
         return result;
     }

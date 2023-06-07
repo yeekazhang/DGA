@@ -26,7 +26,7 @@ import java.util.List;
 @Service
 public class TableMetaInfoExtraServiceImpl extends ServiceImpl<TableMetaInfoExtraMapper, TableMetaInfoExtra> implements TableMetaInfoExtraService {
 
-    @Autowired
+    //@Autowired
     private HiveMetaStoreClient client;
 
     @Override
