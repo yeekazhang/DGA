@@ -81,6 +81,7 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
      */
 
     // whereSql语句生成器
+    // 容易产生sql注入，不用了，在Mybatis中使用动态sql技术拼接sql
     private String generateWhereSql(String tableName, String schemaName, String dwLevel){
         StringBuilder whereSb = new StringBuilder(" where ");
 
@@ -109,9 +110,9 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
     @Override
     public List<PageTableMetaInfo> queryTableMetaInfoList(Integer from, Integer pageSize, String tableName, String schemaName, String dwLevel) {
 
-        String whereSqlStr = generateWhereSql(tableName, schemaName, dwLevel);
+//        String whereSqlStr = generateWhereSql(tableName, schemaName, dwLevel);
 
-        List<PageTableMetaInfo> data = baseMapper.queryTableMetaInfoList(from, pageSize, whereSqlStr);
+        List<PageTableMetaInfo> data = baseMapper.queryTableMetaInfoList(from, pageSize, schemaName, tableName, dwLevel);
 
         return data;
     }
@@ -119,8 +120,8 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
     // 查询数据库列表总数
     @Override
     public int statsTotalNum(String tableName, String schemaName, String dwLevel) {
-        String whereSql = generateWhereSql(tableName, schemaName, dwLevel);
-        return baseMapper.statsTotalNum(whereSql);
+//        String whereSql = generateWhereSql(tableName, schemaName, dwLevel);
+        return baseMapper.statsTotalNum(schemaName, tableName, dwLevel);
     }
 
     /*

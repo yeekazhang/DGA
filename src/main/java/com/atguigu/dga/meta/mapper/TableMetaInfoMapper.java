@@ -20,10 +20,16 @@ import java.util.List;
 public interface TableMetaInfoMapper extends BaseMapper<TableMetaInfo> {
 
     // 查询指定页面的列表
-    List<PageTableMetaInfo> queryTableMetaInfoList(@Param("from") Integer from,@Param("size") Integer size,@Param("whereSql") String whereSql);
+    List<PageTableMetaInfo> queryTableMetaInfoList(@Param("from") Integer from,
+                                                   @Param("size") Integer pageSize,
+                                                   @Param("db") String db,
+                                                   @Param("table") String table,
+                                                   @Param("dwLevel") String dwLevel);
 
     // 查询符合条件的列表总数
-    int statsTotalNum(@Param("whereSql") String tableName);
+    int statsTotalNum(@Param("db") String db,
+                      @Param("table") String table,
+                      @Param("dwLevel") String dwLevel);
 
 
 

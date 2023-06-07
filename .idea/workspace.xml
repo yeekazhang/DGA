@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="表信息查询列表基本完成，要解决sql注入问题">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/Developer/Maven/apache-maven-3.8.1/bin/repository" />
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="$USER_HOME$/Developer/Maven/apache-maven-3.8.1/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QozlP3cfSrt9S5KuF1JjemeoHt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yeeka/station/courses/DGA/src/main/resources/mappers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36666667&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.output.results&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;37b435361e98c02269d063f322ae7c20&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/mappers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DgaApplication">
+    <configuration name="DgaApplicationTests.testHiveMetaStoreClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DGA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.dga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.dga" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.DgaApplicationTests" />
+      <option name="METHOD_NAME" value="testHiveMetaStoreClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DgaApplicationTests.testTableJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DGA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.dga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.dga" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.DgaApplicationTests" />
+      <option name="METHOD_NAME" value="testTableJson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DgaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="dga" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.dga.DgaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DgaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="DGA" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.dga.DgaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DgaApplicationTests.testTableJson" />
+        <item itemvalue="JUnit.DgaApplicationTests.testHiveMetaStoreClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="" />
+      <created>1686034873276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686034873276</updated>
+      <workItem from="1686034875321" duration="7087000" />
+      <workItem from="1686042018964" duration="126000" />
+      <workItem from="1686042172361" duration="222000" />
+      <workItem from="1686042404350" duration="153000" />
+      <workItem from="1686042639395" duration="46000" />
+      <workItem from="1686119688898" duration="14067000" />
+      <workItem from="1686136547773" duration="83000" />
+      <workItem from="1686136703500" duration="24000" />
+      <workItem from="1686136759317" duration="22000" />
+      <workItem from="1686136851633" duration="72000" />
+      <workItem from="1686136932620" duration="2818000" />
+      <workItem from="1686142385784" duration="234000" />
+    </task>
+    <task id="LOCAL-00001" summary="dont know what">
+      <created>1686035553692</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686035553692</updated>
+    </task>
+    <task id="LOCAL-00002" summary="dont know what">
+      <created>1686039861784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686039861784</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hey">
+      <created>1686040447911</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686040447911</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完成任务一：抽取元数据">
+      <created>1686119840483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686119840483</updated>
+    </task>
+    <task id="LOCAL-00005" summary="表信息查询列表基本完成，要解决sql注入问题">
+      <created>1686136360069</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686136360069</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dont know what" />
+    <MESSAGE value="hey" />
+    <MESSAGE value="完成任务一：抽取元数据" />
+    <MESSAGE value="表信息查询列表基本完成，要解决sql注入问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="表信息查询列表基本完成，要解决sql注入问题" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

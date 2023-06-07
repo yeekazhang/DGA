@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.dga.meta.mapper.TableMetaInfoMapper">
+    <select id="queryTableMetaInfoList" resultType="com.atguigu.dga.meta.bean.PageTableMetaInfo">
+        select
+            t2.*,
+            t1.busi_owner_user_name,
+            t1.tec_owner_user_name
+        <include refid="listSql"/>
+        order by id
+        limit #{from},#{size}
+    </select>
+
+    <!--
+        常见的java的基本数据类型和包装类，Mybatis提供了简写的别名，无需提供全类名
+    -->
+    <select id="statsTotalNum" resultType="int">
+        select
+            count(*)
+       <include refid="listSql"/>
+    </select>
+
+    <sql id="listSql">
+        from (
+             select
+                 table_name,
+                 schema_name,
+                 tec_owner_user_name,
+                 busi_owner_user_name
+             from table_meta_info_extra
+             <where>
+                 <if test=" "
+             </where>
+        ) t1 join (
+        select
+            id,
+            table_name,
+            schema_name,
+            table_comment,
+            table_size,
+            table_total_size,
+            table_last_modify_time,
+            table_last_access_time
+        from table_meta_info
+        where assess_date = (select max(assess_date) from table_meta_info)
+        ) t2 on t1.table_name = t2.table_name and t1.schema_name = t2.schema_name
+    </sql>
+
+</mapper>
