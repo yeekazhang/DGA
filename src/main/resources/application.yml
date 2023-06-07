@@ -21,7 +21,7 @@ spring:
     exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
 
 mybatis-plus:
-  mapper-locations: classpath*:/mappers/*Mapper.xml
+  mapper-locations: classpath*:/mappers/*.xml
   configuration:
     mapUnderscoreToCamelCase: true
 
