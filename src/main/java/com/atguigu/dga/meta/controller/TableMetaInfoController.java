@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -101,6 +102,22 @@ public class TableMetaInfoController {
 
         return result;
     }
+
+    /*
+        json格式的请求参数，要么使用 Map 或 Bean 接受
+            还需要添加 @RequestBody
+     */
+    @PostMapping("/tableExtra")
+    public String saveExtraMetaInfo(@RequestBody TableMetaInfoExtra extra){
+
+        // 生成更新时间
+        extra.setUpdateTime(new Timestamp(System.currentTimeMillis()));
+
+        metaInfoExtraService.updateById(extra);
+
+       return "success";
+    }
+
 }
 
 
