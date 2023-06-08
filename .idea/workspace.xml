@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="表信息查询列表基本完成，要解决sql注入问题">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="解决module问题">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/bean/TableMetaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/bean/TableMetaInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/controller/TableMetaInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/controller/TableMetaInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/config/DgaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/config/DgaConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/generator/MyGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/generator/MyGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/PageTableMetaInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/PageTableMetaInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/TableMetaInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/TableMetaInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/TableMetaInfoExtra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/bean/TableMetaInfoExtra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoExtraServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoExtraServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/TableMetaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/TableMetaInfoMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,37 +53,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yeeka/station/courses/DGA/src/main/resources/mappers&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.36666667&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.output.results&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;37b435361e98c02269d063f322ae7c20&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/Users/yeeka/station/courses/DGA/src/main/resources/mappers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.36666667",
+    "settings.editor.selected.configurable": "database.output.results",
+    "spring.configuration.checksum": "37b435361e98c02269d063f322ae7c20",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/mappers" />
@@ -158,6 +162,7 @@
       <workItem from="1686136851633" duration="72000" />
       <workItem from="1686136932620" duration="2818000" />
       <workItem from="1686142385784" duration="234000" />
+      <workItem from="1686142652746" duration="4328000" />
     </task>
     <task id="LOCAL-00001" summary="dont know what">
       <created>1686035553692</created>
@@ -194,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686136360069</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="解决module问题">
+      <created>1686142840277</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686142840277</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +228,8 @@
     <MESSAGE value="hey" />
     <MESSAGE value="完成任务一：抽取元数据" />
     <MESSAGE value="表信息查询列表基本完成，要解决sql注入问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="表信息查询列表基本完成，要解决sql注入问题" />
+    <MESSAGE value="解决module问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决module问题" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

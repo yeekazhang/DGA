@@ -32,14 +32,14 @@
                  busi_owner_user_name
              from table_meta_info_extra
              <where>
-                 <if test=" db != null">
-                     and db = #{name}
+                 <if test=" db != null and db != '' ">
+                     and schema_name = #{db}
                  </if>
-                 <if test=" tableName != null">
-                     and id = #{name}
+                 <if test=" table != null and table != '' ">
+                     and table_name = #{table}
                  </if>
-                 <if test=" db != null">
-                     and last_name = #{name}
+                 <if test=" dwLevel != null and dwLevel != '' ">
+                     and dw_level = #{dwLevel}
                  </if>
              </where>
         ) t1 join (

@@ -2,9 +2,12 @@ package com.atguigu.dga.meta.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.dga.meta.bean.PageTableMetaInfo;
+import com.atguigu.dga.meta.bean.TableMetaInfo;
+import com.atguigu.dga.meta.bean.TableMetaInfoExtra;
 import com.atguigu.dga.meta.service.TableMetaInfoExtraService;
 import com.atguigu.dga.meta.service.TableMetaInfoService;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -77,6 +80,24 @@ public class TableMetaInfoController {
         // 按照要求，封装返回的数据
         result.put("total", num);
         result.put("list", metaInfos);
+
+        return result;
+    }
+
+
+    @GetMapping("/table/{id}")
+    public TableMetaInfo queryTableMetaInfo(@PathVariable("id") Long id){
+
+        // 根据id查询TableMetaInfo对象
+        TableMetaInfo result = metaInfoService.getById(id);
+
+        // 按照库名和表名查询额外的元数据信息
+        TableMetaInfoExtra metaInfoExtra = metaInfoExtraService.getOne(new QueryWrapper<TableMetaInfoExtra>()
+                .eq("table_name", result.getTableName())
+                .eq("schema_name", result.getSchemaName())
+        );
+
+        result.setTableMetaInfoExtra(metaInfoExtra);
 
         return result;
     }

@@ -1,6 +1,7 @@
 package com.atguigu.dga.meta.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
@@ -24,6 +25,13 @@ import lombok.AllArgsConstructor;
 public class TableMetaInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /*
+        嵌套TableMetaInfoExtra
+        当前字段对应的表table_meta_info中是没有的，查询时，不需要封装
+     */
+    @TableField(exist = false)
+    private TableMetaInfoExtra tableMetaInfoExtra;
 
     /**
      * 表id
