@@ -31,6 +31,6 @@ public interface TableMetaInfoMapper extends BaseMapper<TableMetaInfo> {
                       @Param("table") String table,
                       @Param("dwLevel") String dwLevel);
 
-
-
+    // 查询今天要考评的所有表的元数据信息 包含 TableMetaInfo 和 TableMetaInfoExtra
+    List<TableMetaInfo> queryAllTableMeta();
 }

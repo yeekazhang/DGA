@@ -4,10 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="表单详细信息完成">
+    <list default="true" id="29fd673d-274b-48e2-b65d-4d6bc5e5831a" name="Changes" comment="表单辅助信息完成">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/AssessorOld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/AssessorTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/cal/CheckTaskFailure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/cal/LongTermNoAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/cal/LongTermNoProduce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/quality/TableDataVolumeCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/quality/TableProduceEfficient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/spec/CheckBusOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/spec/CheckFieldComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/spec/CheckTableComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/spec/CheckTableLegal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/spec/CheckTecOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/storage/CheckEmptyTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/storage/CheckLifecycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/assess/storage/CheckTableFieldSimilar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/bean/AssessParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/bean/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/bean/GovernanceAssessDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/bean/GovernanceMetric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/bean/GovernanceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/mapper/GovernanceAssessDetailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/mapper/GovernanceMetricMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/mapper/GovernanceTypeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/GovernanceAssessDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/GovernanceMetricService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/GovernanceTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/impl/GovernanceAssessDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/impl/GovernanceMetricServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/assess/service/impl/GovernanceTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/config/MetaDataUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/bean/TDsTaskDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/bean/TDsTaskInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/mapper/TDsTaskDefinitionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/mapper/TDsTaskInstanceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/service/TDsTaskDefinitionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/service/TDsTaskInstanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/service/impl/TDsTaskDefinitionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/ds/service/impl/TDsTaskInstanceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/atguigu/dga/AssessTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/atguigu/dga/DSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/config/MetaConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/config/MetaConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/generator/MyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/generator/MyGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/controller/TableMetaInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/controller/TableMetaInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/controller/TableMetaInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/controller/TableMetaInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/TableMetaInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/TableMetaInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/TableMetaInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/atguigu/dga/DgaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/atguigu/dga/DgaApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/config/MetaConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/config/MetaConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/generator/MyGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/generator/MyGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/mapper/TableMetaInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/TableMetaInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/TableMetaInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/atguigu/dga/meta/service/impl/TableMetaInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/TableMetaInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/TableMetaInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/atguigu/dga/DgaApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/atguigu/dga/DgaApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,40 +103,79 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
+    "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "/Users/yeeka/station/courses/DGA/src/main/resources/mappers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.36666667",
-    "settings.editor.selected.configurable": "database.output.results",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "spring.configuration.checksum": "37b435361e98c02269d063f322ae7c20",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mysql"
+      "mysql",
+      "hive"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.atguigu.dga.assess.bean" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/mappers" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.dga.assess.assess.cal" />
+      <recent name="com.atguigu.dga.assess.assess.spec" />
+      <recent name="com.atguigu.dga.assess.assess" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DgaApplication">
+  <component name="RunManager" selected="JUnit.AssessTest.testAssess">
+    <configuration name="MyGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.generator.MyGenerator" />
+      <module name="DGA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.dga.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssessTest.testAssess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DGA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.dga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.dga" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.AssessTest" />
+      <option name="METHOD_NAME" value="testAssess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DgaApplicationTests.testHiveMetaStoreClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DGA" />
       <extension name="coverage">
@@ -90,6 +187,22 @@
       <option name="PACKAGE_NAME" value="com.atguigu.dga" />
       <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.DgaApplicationTests" />
       <option name="METHOD_NAME" value="testHiveMetaStoreClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DgaApplicationTests.testQueryAllMetaInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DGA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.dga.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.dga" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.dga.DgaApplicationTests" />
+      <option name="METHOD_NAME" value="testQueryAllMetaInfo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,6 +240,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyGenerator" />
+        <item itemvalue="JUnit.AssessTest.testAssess" />
+        <item itemvalue="JUnit.DgaApplicationTests.testQueryAllMetaInfo" />
         <item itemvalue="JUnit.DgaApplicationTests.testTableJson" />
         <item itemvalue="JUnit.DgaApplicationTests.testHiveMetaStoreClient" />
       </list>
@@ -152,7 +268,8 @@
       <workItem from="1686136851633" duration="72000" />
       <workItem from="1686136932620" duration="2818000" />
       <workItem from="1686142385784" duration="234000" />
-      <workItem from="1686142652746" duration="5341000" />
+      <workItem from="1686142652746" duration="59017000" />
+      <workItem from="1686384932496" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="dont know what">
       <created>1686035553692</created>
@@ -203,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686190888143</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="表单辅助信息完成">
+      <created>1686191792605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686191792605</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,13 +345,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="dont know what" />
     <MESSAGE value="hey" />
     <MESSAGE value="完成任务一：抽取元数据" />
     <MESSAGE value="表信息查询列表基本完成，要解决sql注入问题" />
     <MESSAGE value="解决module问题" />
     <MESSAGE value="表单详细信息完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="表单详细信息完成" />
+    <MESSAGE value="表单辅助信息完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="表单辅助信息完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

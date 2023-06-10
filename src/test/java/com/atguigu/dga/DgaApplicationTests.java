@@ -2,6 +2,7 @@ package com.atguigu.dga;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SimplePropertyPreFilter;
+import com.atguigu.dga.assess.service.GovernanceAssessDetailService;
 import com.atguigu.dga.meta.bean.TableMetaInfoExtra;
 import com.atguigu.dga.meta.service.TableMetaInfoExtraService;
 import com.atguigu.dga.meta.service.TableMetaInfoService;
@@ -17,12 +18,27 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DgaApplicationTests {
 
-    @Autowired
+    //@Autowired
     private HiveMetaStoreClient client;
 
     @Test
     void contextLoads() {
     }
+
+    @Test
+    void testQueryAllMetaInfo() throws Exception{
+        System.out.println(service.queryAllTableMeta());
+    }
+
+    @Autowired
+    private GovernanceAssessDetailService assessDetailService;
+    @Test
+    void testAssess() throws Exception{
+
+        assessDetailService.assess(null);
+
+    }
+
 
     @Test
     void testHiveMetaStoreClient() throws Exception {
@@ -50,7 +66,7 @@ class DgaApplicationTests {
     private TableMetaInfoExtraService extraService;
     @Test
     void testSaveExtraInfo() throws Exception {
-		extraService.initExtraMetaInfo("gmall");
+        extraService.initExtraMetaInfo("gmall");
     }
 
 

@@ -58,10 +58,10 @@ public class TableMetaInfoController {
                 [  ] java处理方法return的应该是一个List 或 JSONObject
 
             分页的规律:  pageSize = 20
-                       pageNo = 1, 从第 1 条数据开始返回，返回之后的20条
-                       pageNo = 2, 从第 21 条数据开始返回，返回之后的20条
+                       pageNo = 1, 从第 0 条数据开始返回，返回之后的20条
+                       pageNo = 2, 从第 20 条数据开始返回，返回之后的20条
 
-                       from = (pageNo - 1) * 20 + 1
+                       from = (pageNo - 1) * 20
 
      */
     @GetMapping("/table-list")
@@ -69,7 +69,7 @@ public class TableMetaInfoController {
 
         JSONObject result = new JSONObject();
 
-        // 计算返回数据的其实行数
+        // 计算返回数据的起始行数
         int from = (pageNo - 1) * pageSize;
 
         // 调用service查询列表数据

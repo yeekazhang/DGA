@@ -26,5 +26,8 @@ public interface TableMetaInfoService extends IService<TableMetaInfo> {
     // 查询元数据列表总数
     int statsTotalNum(String tableName, String schemaName, String dwLevel);
 
+    // 查询今天要考评的所有表元数据
+    List<TableMetaInfo> queryAllTableMeta();
+
 
 }

@@ -4,6 +4,51 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.atguigu.dga.meta.mapper.TableMetaInfoMapper">
+
+    <!--
+        resultType不行，会自动忽略TableMetaInfoExtra
+        只能用resultMap，自定义封装规则
+    -->
+    <select id="queryAllTableMeta" resultMap="queryAll">
+        select
+            t2.*,
+            t1.*
+        from (select id extraId,
+                     table_name extraTname,
+                     schema_name extraDbname,
+                     tec_owner_user_name,
+                     busi_owner_user_name,
+                     lifecycle_type,
+                     lifecycle_days,
+                     security_level,
+                     dw_level,
+                     create_time extraCt,
+                     update_time extraUt
+              from table_meta_info_extra
+             ) t1 join (
+            select
+                *
+            from table_meta_info
+            where assess_date = (select max(assess_date) from table_meta_info)
+        ) t2
+                       on t1.extraTname = t2.table_name and t1.extraDbname = t2.schema_name;
+    </select>
+
+    <!--
+        除了 tableMetaInfoExtra 其他的属性都可以自动封装
+    -->
+    <resultMap id="queryAll" type="com.atguigu.dga.meta.bean.TableMetaInfo" autoMapping="true">
+        <!-- 解决单个Bean中嵌套的Bean的封装规则 -->
+        <association property="tableMetaInfoExtra" javaType="com.atguigu.dga.meta.bean.TableMetaInfoExtra" autoMapping="true">
+            <result property="id" column="extraId"/>
+            <result property="tableName" column="ExtraTName"/>
+            <result property="schemaName" column="ExtraDbName"/>
+            <result property="createTime" column="extraCt"/>
+            <result property="updateTime" column="extraUt"/>
+        </association>
+    </resultMap>
+
+
     <select id="queryTableMetaInfoList" resultType="com.atguigu.dga.meta.bean.PageTableMetaInfo">
         select
             t2.*,
@@ -36,7 +81,7 @@
                      and schema_name = #{db}
                  </if>
                  <if test=" table != null and table != '' ">
-                     and table_name = #{table}
+                     and table_name like concat('%',#{table},'%')
                  </if>
                  <if test=" dwLevel != null and dwLevel != '' ">
                      and dw_level = #{dwLevel}

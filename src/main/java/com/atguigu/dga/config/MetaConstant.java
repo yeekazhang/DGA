@@ -6,6 +6,16 @@ package com.atguigu.dga.config;
  */
 public interface MetaConstant
 {
+    // 存储gmall数仓分层的校验规则
+    String gmallOdsRegex = "^ods_\\w+_(inc|full)$";
+    String gmallDwdRegex = "^dwd_(trade|interaction|traffic|user|tool)_\\w+_(inc|full|acc)$";
+    String gmallDwsRegex = "^dws_(trade|interaction|traffic|user|tool)_\\w+_(\\d+d|nd|td)$";
+    String gmallDimRegex = "^dim_\\w+_(zip|full)$";
+    String gmallAdsRegex = "^ads_(trade|interaction|traffic|user|tool)_\\w$";
+    // Data Market: 模棱两可的，可以放入DM层
+    String gmallDMRegex = "^dm_\\w$";
+
+
     String schema_name="";
     //存储周期
     String LIFECYCLE_TYPE_PERM="PERM";  //永久

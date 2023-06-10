@@ -17,9 +17,9 @@ public class MyGenerator
             指定为哪些表生成
 
          */
-        String[] tables={ "table_meta_info_extra"  };
+        String[] tables={ "t_ds_task_instance", "t_ds_task_definition" };
 
-        FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/dga","root","admin")
+        FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/dolphinscheduler","root","admin")
                 .globalConfig(builder -> {
                     builder.author("atguigu")               //作者
                             .outputDir("/Users/yeeka/station/courses/DGA/src/main/java")    //输出路径(写到java目录)
@@ -28,7 +28,7 @@ public class MyGenerator
                 })
                 .packageConfig(builder -> {                 //各个package 名称
                     builder.parent("com.atguigu.dga")
-                            .moduleName("meta") // 是否要在父包下生成子目录
+                            .moduleName("ds") // 是否要在父包下生成子目录
                             .entity("bean")
                             .service("service")
                             .serviceImpl("service.impl")

@@ -124,6 +124,11 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
         return baseMapper.statsTotalNum(schemaName, tableName, dwLevel);
     }
 
+    @Override
+    public List<TableMetaInfo> queryAllTableMeta() {
+        return baseMapper.queryAllTableMeta();
+    }
+
     /*
         从hdfs中统计元数据信息
      */
@@ -151,6 +156,9 @@ public class TableMetaInfoServiceImpl extends ServiceImpl<TableMetaInfoMapper, T
             tableMetaInfo.setFsUsedSize(status.getUsed());
             tableMetaInfo.setFsRemainSize(status.getRemaining());
         }
+
+        // 客户端用完之后关闭
+        hdfs.close();
     }
 
     /*
